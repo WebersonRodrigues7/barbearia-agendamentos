@@ -1,0 +1,206 @@
+.mainLog {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1508 100%);
+}
+
+.container {
+  border-radius: 10px;
+  background-image: linear-gradient(120deg, #181512, #9e7f38);
+  display: flex;
+  width: 900px;
+  height: 550px;
+}
+
+.leftLog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+}
+
+.leftLog h1 {
+  color: #c49e46;
+}
+
+.leftLog .barberStyle {
+  font-family: monospace;
+  color: #927633;
+  font-size: 1.5em;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  width: 100%;
+  padding: 0px 40px;
+}
+
+.line {
+  display: block;
+  flex: 1;
+  height: 1px;
+  background: rgba(196, 158, 70, 0.4);
+}
+
+.diamond {
+  width: 6px;
+  height: 6px;
+  background: #c49e46;
+  transform: rotate(45deg);
+}
+
+.leftLog p {
+  font-family: monospace;
+  font-size: 1.2em;
+  color: rgba(177, 177, 177, 0.705);
+}
+
+.rightLog {
+  border-radius: 10px;
+  background-color: #111010;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightLog h1 {
+  color: white;
+  margin: 70px 0px 0px 50px;
+}
+
+.rightLog .ptext {
+  margin: 0px 0px 25px 50px;
+  color: rgba(128, 128, 128, 0.596);
+}
+
+.formLogin {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 1em;
+  font-family: monospace;
+  font-weight: 100;
+  margin: 15px 0px 0px 50px;
+  color: rgb(196, 174, 53);
+}
+
+.input {
+  background-color: #181512;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #c49e46;
+  padding: 12px;
+  margin: auto;
+  width: 400px;
+}
+
+.formLogin .forgotPass {
+  color: #c49e46;
+  text-align: right;
+  margin: 30px 50px;
+}
+
+.formLogin button {
+  width: 300px;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  border: 1px solid white;
+  margin: auto;
+  transition: 0.4s ease;
+}
+
+.formLogin button:hover {
+  background-color: rgba(255, 255, 255, 0.356);
+  cursor: pointer;
+}
+
+.formLogin .noAcc {
+  margin: 20px auto;
+  color: rgb(90, 89, 89);
+}
+
+.formLogin .noAcc span {
+  color: #c49e46;
+}
+
+@media (max-width: 768px) {
+  .container {
+    background-color: red;
+    display: flex;
+    width: 500px;
+    height: 550px;
+  }
+
+  .leftLog {
+    display: none;
+  }
+
+  .rightLog h1 {
+    color: white;
+    margin: 70px 0px 0px 50px;
+  }
+
+  .rightLog .ptext {
+    margin: 0px 0px 25px 50px;
+    color: rgba(128, 128, 128, 0.596);
+  }
+
+  .label {
+    margin: 10px 0px 0px 50px;
+    color: #c49e46;
+  }
+
+  .formLogin .input {
+    padding: 13px;
+    margin: auto;
+    width: 400px;
+  }
+
+  .formLogin button {
+    width: 400px;
+  }
+}
+
+@media (max-width: 400px) {
+  .label {
+    margin: 10px 0px 0px 50px;
+    color: #c49e46;
+  }
+
+  .formLogin .input {
+    width: 300px;
+  }
+
+  .rightLog h1 {
+    font-size: 1.5em;
+    color: white;
+    margin: 70px 0px 0px 50px;
+  }
+
+  .rightLog .ptext {
+    font-size: 0.8em;
+    margin: 0px 95px 25px 50px;
+    color: rgba(128, 128, 128, 0.596);
+  }
+
+  .formLogin button {
+    width: 300px;
+  }
+
+  .formLogin .forgotPass {
+    color: #c49e46;
+    text-align: right;
+    margin: 30px 100px;
+  }
+}

@@ -1,0 +1,40 @@
+.card {
+    background-color: #141210;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: 250px;
+    font-family: sans-serif;
+    height: 200px;
+    border-radius: 10px;
+    border: 1px solid #C49E46;
+}
+
+.card .icon {
+    border: 1px solid #C49E46;
+    margin: 30px 0px 10px 30px;
+    background-color: #211D14;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.card h3 {
+    margin: 10px 0px 0px 30px;
+    font-family: sans-serif;
+    font-weight: 100;
+    color: white;
+    
+}
+
+.card h4 {
+    color: #C49E46;
+    margin-left: 30px;
+    font-weight: 100;
+}
+
+.card p {
+    margin-left: 30px;
+    font-size: .8em;
+    width: 150px;
+    color: rgba(151, 150, 150, 0.644);
+}

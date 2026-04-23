@@ -1,0 +1,311 @@
+.landing {
+  background-color: #0c0a08;
+}
+
+.landing .sec1 {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.sec1 {
+  border-bottom: 1px solid #7e662d;
+}
+
+.sec1 .div {
+  margin: 150px 50px 50px 70px;
+}
+
+.sec1 .div .premium {
+  font-family: monospace;
+  color: #c49e46;
+  font-size: 1.5em;
+}
+
+.sec1 .div .premium span {
+  display: inline-block;
+  margin: 50px 0px 7px 0px;
+  flex: 1;
+  height: 1px;
+  width: 30px;
+  background-color: #c49e46;
+}
+
+.sec1 .ocorte {
+  color: white;
+  font-size: 3em;
+  width: 300px;
+}
+
+.sec1 .div h2 {
+  font-size: 3em;
+  color: #c49e46;
+}
+
+.sec1 .div p {
+  color: rgba(168, 168, 168, 0.541);
+  font-size: 1.1em;
+  margin: 20px 0px 30px 0px;
+  width: 480px;
+}
+
+.sec1 .div button {
+  background-color: #c49e46;
+  color: #0c0a08;
+  padding: 10px 50px 15px 30px;
+  width: 250px;
+  text-align: left;
+  border-radius: 5px;
+  font-family: monospace;
+  font-weight: 400;
+  font-size: 1.4em;
+  transition: 0.4s ease;
+  border: none;
+}
+
+.sec1 .div button:hover {
+  background-color: #dbb14f;
+  cursor: pointer;
+  transform: translateY(-1px);
+}
+
+.sec1 .div .divNav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.sec1 .div .divNav a {
+  text-decoration: none;
+}
+
+.sec1 .div .divNav p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 30px;
+  transition: 0.3s ease;
+}
+
+.sec1 .div .divNav p:hover{
+  cursor: pointer;
+  color: grey;
+  transform: translateY(-1px);
+}
+
+.rightDiv {
+  background-color: #141210;
+  border-radius: 10px;
+  height: 420px;
+  width: 300px;
+  margin: 170px 70px 0px 0px;
+}
+
+.rightDiv .imageBarber h1 {
+  text-align: center;
+  margin: 10px 0px;
+  color: #c49e46;
+  font-family: monospace;
+}
+
+.rightDiv .imageBarber .imageAdm {
+}
+
+.rightDiv .bioBarber {
+  color: white;
+  margin-left: 20px;
+}
+
+.rightDiv .bioBarber h3 {
+  margin-top: 10px;
+}
+
+.rightDiv .bioBarber h4 {
+  color: #7e662d;
+  font-size: 1.2em;
+  font-family: monospace;
+}
+
+.sec2 {
+  border-bottom: 1px solid #c49e46;
+}
+
+.sec2 .divCards {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+}
+
+.sec2 h2 {
+  color: #c49e46;
+  font-family: monospace;
+  margin: 100px 0px 10px 0px;
+  text-align: center;
+}
+
+.sec2 h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sec3 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+
+.sec3 .imageSec3 {
+  margin: 100px 50px 80px 50px;
+}
+
+.sec3 .imageSec3 .imageFachada {
+  border-radius: 10px;
+}
+
+.sec3 .rightSide {
+  margin: 100px 0px;
+}
+
+.sec3 .rightSide h2 {
+  color: #c49e46;
+  font-family: monospace;
+  font-weight: 100;
+}
+
+.sec3 .rightSide h1 {
+  color: white;
+  margin: 10px 0px 10px 0px;
+  width: 500px;
+}
+
+.sec3 .rightSide p {
+  color: rgba(150, 148, 148, 0.562);
+}
+
+.sec3 .rightSide .pClient {
+  border-left: 1px solid #c49e46;
+  padding-left: 20px;
+  color: whitesmoke;
+  margin: 10px 0px 10px 0px;
+  font-size: 1.3em;
+}
+
+.sec3 .rightSide .pFundation {
+  width: 480px;
+  font-size: 1.1em;
+}
+
+@media (max-width: 1000px) {
+  .sec1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sec1 .div {
+    margin: 150px auto 80px auto;
+  }
+
+  .rightDiv {
+    display: flex;
+    flex-direction: column;
+    margin: auto auto 50px auto;
+  }
+
+  .sec2 .divCards {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  .sec2 h2 {
+    color: #c49e46;
+    font-family: monospace;
+    margin: 100px 0px 10px 0px;
+    text-align: center;
+  }
+
+  .sec2 h1 {
+    color: white;
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  .sec3 {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .sec3 .imageSec3 {
+    margin: 100px auto 0px auto;
+  }
+
+  .sec3 .rightSide {
+    margin: auto;
+  }
+  .sec3 .rightSide h2 {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sec1 .div p {
+    margin: 20px 0px 30px 0px;
+    width: 300px;
+  }
+  .sec1 .div .divNav {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .sec1 .div p {
+    margin: 20px 0px 30px 0px;
+    width: 250px;
+  }
+  .sec1 .div .divNav {
+    display: block;
+  }
+
+  .landing .sec1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rightDiv {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  .sec2 h2 {
+    color: #c49e46;
+    font-family: monospace;
+    margin: 100px 0px 10px 0px;
+    text-align: center;
+  }
+
+  .sec2 h1 {
+    text-align: center;
+    color: white;
+    margin-left: 0px;
+  }
+
+  
+
+  .sec3 .rightSide h1 {
+    font-size: 1.5em; 
+    width: 370px;
+  }
+
+  .sec3 .rightSide .pFundation {
+    width: 350px;
+  }
+
+  .sec3 .rightSide .pFundation {
+    
+  }
+}

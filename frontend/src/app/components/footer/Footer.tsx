@@ -11,7 +11,7 @@ export default function Footer() {
                 <h1>Pronto para o próximo corte?</h1>
                 <p>Escolha seu barbeiro e confirme em menos de 1 minuto</p>
             </div>
-            <Link href={'/agendar'}><button>AGENDAR AGORA</button></Link>
+            <Link href={'/agendamentos'}><button>AGENDAR AGORA</button></Link>
         </footer>
     )
 }

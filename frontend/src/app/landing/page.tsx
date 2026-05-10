@@ -1,6 +1,7 @@
 "use client"
 
 import { useSession } from "next-auth/react"
+import { signOut } from "next-auth/react"
 import Header from "../components/header/header"
 import Style from "./landing.module.css"
 import { FaRegArrowAltCircleRight } from "react-icons/fa"
@@ -14,18 +15,7 @@ import Link from "next/link"
 
 
 export default function Dashboard() {
-    const { data: session, status } = useSession()
 
-    async function buscarDados() {
-        const response = await fetch('http://localhost:3001/appointments', {
-            method: "GET",
-            headers: {
-                'Authorization': `Bearer ${session?.accessToken}`
-            },
-        })
-
-
-    }
 
 
     return (
@@ -37,11 +27,12 @@ export default function Dashboard() {
             <section className={Style.sec1}>
                 <div className={Style.div}>
                     <h1 className={Style.premium}><span></span> BARBEARIA PREMIUM</h1>
+                    <button onClick={() => signOut({ callbackUrl: "/login" })}>logout</button>
                     <h1 className={Style.ocorte}>O corte certo muda tudo.</h1>
                     <h2>Agende já</h2>
                     <p>Tradição, precisão e estilo em cada detalhe. Venha viver a experiência de uma barbearia de verdade</p>
                     <div className={Style.divNav}>
-                        <Link href={'/agendar'}><button>FAZER AGENDAMENTO</button></Link>
+                        <Link href={'/agendamentos'}><button>FAZER AGENDAMENTO</button></Link>
                         <a href="#barbeiros">
                             <p><span><FaRegArrowAltCircleRight color="#C49E46" size={35} /></span>VER SERVIÇOS</p>
                         </a>
@@ -57,7 +48,7 @@ export default function Dashboard() {
                             height={300}
                             alt="barbero"
                         />
-                        
+
                     </div>
                     <div className={Style.bioBarber}>
                         <h3>Roger Menezes</h3>
@@ -93,7 +84,7 @@ export default function Dashboard() {
             <section id="sobre" className={Style.sec3}>
                 <div className={Style.imageSec3}>
                     <Image
-                    className={Style.imageFachada}
+                        className={Style.imageFachada}
                         src={"/fachada.jpeg"}
                         width={300}
                         height={300}
@@ -105,7 +96,7 @@ export default function Dashboard() {
                     <h1>Mais de uma década afiando o estilo da cidade</h1>
                     <p className={Style.pClient}><i>"Cada cliente sai daqui sabendo quem é"</i></p>
                     <p className={Style.pFundation}>Fundada em 20**, a barber nasceu da paixão por artesanato e identidade masculina. Aqui você não é só mais um número — você tem nome, estilo e horário marcado.</p>
-                    
+
                 </div>
 
             </section>

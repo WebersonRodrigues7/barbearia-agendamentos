@@ -22,7 +22,7 @@ export default function Header() {
                 <a href="#sobre">
                     <li>SOBRE</li>
                 </a>
-                <Link href={'/agendar'}><button className={Styles.agendar}>AGENDAR HORÁRIO</button></Link>
+                <Link href={'/agendamentos'}><button className={Styles.agendar}>AGENDAR HORÁRIO</button></Link>
             </ul>
         </header>
     )

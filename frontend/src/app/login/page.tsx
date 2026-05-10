@@ -8,11 +8,12 @@ import Styles from "./login.module.css"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 
+
 import { useRouter } from "next/navigation"
 
 
 const schema = z.object({
-    email: z.email("Email inválido!"),
+    email: z.string().email("Email inválido!"),
     password: z.string().min(8, "A senha precisa ter 8 digítos!")
 })
 
@@ -28,15 +29,15 @@ export default function Login() {
     const router = useRouter()
 
     async function onSubmitForm(data: LoginSchema) {
-        const result = await signIn('credentials', { ...data, redirect: false })
-        if (result?.error) {
-            console.log(result.error)
-            return
-        }
-    
+
+        await signIn('credentials', {
+            ...data,
+            redirect: false
+        })
+
         reset()
         router.push('/landing')
-    
+
 
     }
 

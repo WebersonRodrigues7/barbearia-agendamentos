@@ -1,0 +1,231 @@
+.main {
+    background-color: red;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 0;
+    width: 100%;
+}
+
+.div {
+    display: flex;
+    height: 800px;
+}
+
+.secForm {
+    background-color: #0B0A08;
+    width: 600px;
+}
+
+.secForm form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.secForm form label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #c49e46;
+    margin: 30px 0px 0px 0px;
+    font-size: 0.75em;
+}
+
+.secForm form .service {
+    display: flex;
+    flex-direction: column;
+}
+
+.secForm form .service select {
+    border: none;
+    color: white;
+    border-radius: 4px;
+    width: 400px;
+    padding: 8px;
+    background-color: #181512;
+    border: 1px solid #c49e46;
+    font-size: 0.9em;
+}
+
+.secForm form .service select option {
+    border-radius: 4px;
+    width: 400px;
+    padding: 8px;
+    background-color: #181512;
+    font-size: 0.9em;
+}
+
+.secForm form input {
+    border: none;
+    border-radius: 4px;
+    width: 400px;
+    padding: 8px;
+    background-color: #181512;
+    border: 1px solid #c49e46;
+    font-size: 0.9em;
+}
+
+.secForm form input:focus {
+    outline: none;
+    color: white;
+}
+
+.secForm form .barbers {
+    display: flex;
+    gap: 50px;
+}
+
+.secForm form .barbers div {
+    background-color: #131210;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 8px;
+    margin-top: 15px;
+    border: 1px solid #1C1A19;
+    color: rgb(201, 201, 201);
+    padding: 20px;
+    width: 170px;
+    font-size: 0.9em;
+    transition: 0.4s ease;
+}
+
+.secForm form .barbers div:hover {
+    transform: translateY(-4px);
+    cursor: pointer;
+}
+
+.secForm form .barbers div:active {
+    background-color: #17120C;
+    border: 1px solid #c49e46;
+}
+
+.secForm form .times {
+    display: flex;
+    gap: 30px;
+}
+
+.secForm form .times div {
+    display: flex;
+    flex-direction: column;
+}
+
+.secForm form .times input {
+    width: 180px;
+}
+
+.secForm form .horarios {
+    display: flex;
+    margin: 20px 0px 50px 0px;
+    width: 450px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.secForm form .horarios div {
+    background-color: #131210;
+    color: rgba(117, 117, 117, 0.788);
+    padding: 6px;
+    border-radius: 3px;
+    border: 1px solid #1C1A19;
+    font-size: 0.85em;
+    transition: 0.2s ease;
+}
+
+.secForm form .horarios div:hover {
+    transform: translateY(-2px);
+}
+
+.secForm form .horarios div:active {
+    background-color: #17120C;
+    border: 1px solid #c49e46;
+}
+
+.secForm form button {
+    padding: 10px;
+    width: 400px;
+    font-size: 0.9em;
+}
+
+.secAppoint {
+    background-color: #0B0A08;
+    width: 350px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.secAppoint h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #c49e46;
+    font-size: 1.2em;
+}
+
+.secAppoint div {
+    background-color: #131210;
+    border: 1px solid #1C1A19;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.secAppoint div h3 {
+    color: #e8e0d0;
+    font-size: 0.9em;
+}
+
+.secAppoint div p {
+    color: rgba(200, 200, 200, 0.6);
+    font-size: 0.8em;
+}
+
+.dropdown {
+    position: relative;
+    width: 400px;
+}
+
+.input {
+    background-color: #181512;
+    border: 1px solid #c49e46;
+    border-radius: 4px;
+    padding: 8px;
+    color: white;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.opcoes {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #181512;
+    border: 1px solid #c49e46;
+    border-radius: 4px;
+    list-style: none;
+    z-index: 10;
+}
+
+.opcoes li {
+    padding: 10px;
+    color: white;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.opcoes li:hover {
+    background-color: #17120C;
+    color: #c49e46;
+}
+
+.labelHorario {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #c49e46;
+    margin: 30px 0px 0px 0px;
+    font-size: 0.75em;
+}

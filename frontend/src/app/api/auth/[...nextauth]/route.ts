@@ -1,83 +1,62 @@
-import NextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
-const authOptions = {
+import NextAuth from 'next-auth';
+import { NextAuthOptions } from 'next-auth';
+
+export const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
       name: 'Credentials',
-      id: 'credentials',
 
-      // passando oq se deve usar para validar
       credentials: {
-        email: {
-          label: 'email',
-          type: 'email',
-          placeholder: 'email@exemple.com',
-        },
+        email: { label: 'Email', type: 'text', placeholder: 'e-mail' },
         password: { label: 'Password', type: 'password' },
       },
-
-      // funcao q valida o login
       async authorize(credentials, req) {
-        const response = await fetch('http://localhost:3001/auth/login', {
+        const res = await fetch('http://localhost:3001/auth/login', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            email: credentials?.email,
-            password: credentials?.password,
-          }),
+          body: JSON.stringify(credentials),
+          headers: { 'Content-type': 'application/json' },
         });
+        
+        if (!res.ok) return null;
 
-        // se a resposta nao estiver ok retorna nulo
-        if (!response.ok) {
-          return null;
+        const user = await res.json();
+        console.log(user)
+        return {
+            ...user,
+            accessToken: user.access_token
         }
 
-        // converte a resposta em json e salva numa variavel
-        const user = await response.json();
-
-        return {
-          id: user.id,
-          email: user.email,
-          username: user.username,
-          accessToken: user.accessToken,
-        };
       },
     }),
   ],
-
   callbacks: {
-    // executado quando cria um jwt ou atualiza ele
-    //@ts-ignore
     async jwt({ token, user }) {
       if (user) {
-        // copia o acesstoken pra dentro do token jwt dentro do nextauth
         token.accessToken = user.accessToken;
-        token.id = user.id;
-        token.username = user.username;
+        token.id = user.id
       }
 
-      // retorna o token q vai ser criptografado no cookie
+    
+
       return token;
     },
-
-    // executado quando vc usa getSession() ou useSession()
-    //@ts-ignore
     async session({ session, token }) {
       session.accessToken = token.accessToken;
-      session.id = token.id;
-      session.username = token.username;
+      session.user = {
+        ...session.user,
+        id: token.id,
+      };
 
-      // oque o useSession vai receber
+      
+
       return session;
     },
   },
-
   session: {
-    strategy: 'jwt',
+    strategy: 'jwt' as const,
   },
 };
 
-//@ts-ignore
-const handler = NextAuth(authOptions)
-
+const handler = NextAuth(authOptions);
 export { handler as GET, handler as POST };

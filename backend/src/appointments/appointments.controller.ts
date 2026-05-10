@@ -22,6 +22,18 @@ export class AppointmentsController {
   }
 
   @UseGuards(AuthGuard('jwt'))
+  @Patch(':id/cancel')
+  cancel(@Param('id', ParseIntPipe) id:number, @Req() req: any){
+    return this.appointmentsService.cancel(id, req.user.role, req.user.id)
+  }
+
+  @UseGuards(AuthGuard('jwt'))
+  @Patch(':id/complete')
+  complete(@Param('id', ParseIntPipe) id:number, @Req() req: any){
+    return this.appointmentsService.complete(id, req.user.role, req.user.id)
+  }
+
+  @UseGuards(AuthGuard('jwt'))
   @Get()
   get(@Req() req: any){
     return this.appointmentsService.get(req.user.id, req.user.role)
